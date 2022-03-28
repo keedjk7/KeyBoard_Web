@@ -7,7 +7,6 @@ const User = require('../models/User');
 router.post('/register', async (req, res) => {
     const { username, password, name } = req.body;
 
-    // simple validation
     if (!name || !username || !password) {
         return res.render('register', { message: 'Please try again' });
     }
@@ -26,7 +25,6 @@ router.post('/register', async (req, res) => {
 router.post('/login', async (req, res) => {
     const { username, password } = req.body;
   
-    // simple validation
     if (!username || !password) {
       return res.render('register', { message: 'Please try again' });
     }

@@ -9,7 +9,7 @@ const isLoggedIn = (req, res, next) => {
 };
 
 router.get('/', isLoggedIn, function (req, res, next) {
-  res.render('index', { title: 'Keyboard Web' , user: req.session.user});
+  res.render('index', { title: 'Keyboard Web', user: req.session.user });
 });
 
 router.get('/register', (req, res) => {
